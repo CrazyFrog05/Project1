@@ -4,6 +4,7 @@
 #include <string>
 #include "Food.h"
 #include "SuperMarket.h" 
+#include "Fabric.h" 
 
 
 int main() {
@@ -13,9 +14,14 @@ int main() {
 	Supermarket* supermarket = new Supermarket();
 	supermarket->AddGoods(bread);
 	supermarket->AddGoods(milk);
-	supermarket->ShowDataOfGoods();
-	std::cout << "\n\n";
+	//supermarket->ShowDataOfGoods();
+	//std::cout << "\n\n";
 	supermarket->Buy("Milk");
+	//supermarket->ShowDataOfGoods();
+	Food* food;
+	Fabrica* fabrica = new Fabrica();
+	food = fabrica->CreateBread();
+	supermarket->AddGoods(food);
 	supermarket->ShowDataOfGoods();
 
 	return 0;
